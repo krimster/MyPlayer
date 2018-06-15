@@ -10,13 +10,17 @@ class MainActivity : AppCompatActivity(), Logger {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         toast("Hello")
+        toast("Hello", Toast.LENGTH_LONG)
+        applicationContext.toast("hello again")
+
         d("Hello")
     }
 
-    private fun toast(message : String) {
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
-    }
+//    private fun toast(message : String) {
+//        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+//    }
 }
 
 interface Logger {
